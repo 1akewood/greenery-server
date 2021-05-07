@@ -11,12 +11,12 @@ app.use(bodyParaser.urlencoded({extended: true}));
 app.get('/process/login', function(req, res) {  
     var paramId = req.param('id');
      
-    console.log('/process/login 처리, id: '+ paramId);
+    console.log('/process/login transaction, id: '+ paramId);
  
     res.write("Success");
     res.end();
 });
  
 http.createServer(app).listen(3000, function() {
-    console.log('Express 서버가 3000번 포트에서 시작됨.');
+    console.log('Express server port 3000 is binded.');
 });
